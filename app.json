@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "OMEGA SPA POS",
+    "slug": "omega-spa-pos",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "omegaspapos",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#FBF7F2"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.omegaspapos.pos",
+      "infoPlist": {
+        "NSCameraUsageDescription": "OMEGA SPA POS requires camera access for staff attendance selfie verification, cleaning task checks, and stock audit photos."
+      }
+    },
+    "android": {
+      "package": "com.omegaspapos.pos",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Grant OMEGA SPA POS camera permission to verify attendance and task photos."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "a7e3cedc-9668-419e-a5df-8965f7ccec36"
+      }
+    }
+  }
+}
